@@ -28,6 +28,9 @@ export default class ExerciseComponent extends Component {
       )}&otherQuery=${encodeURIComponent(query)}`,
       {
         method: 'GET',
+        headers: {
+          Accept: "application/json",
+        },
       }
     );
     const json = await response.json();
